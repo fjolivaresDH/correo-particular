@@ -64,7 +64,7 @@ scripts/                check-no-network, sync-catalog
 ## Límites, sin adornos
 
 - **Solo Gmail web**, en `mail.google.com`. Ni Outlook, ni otros correos, ni la API de Gmail.
-- **Solo navegadores Chromium** (Chrome, Edge, Brave…). Firefox, después, si se quiere.
+- **Solo Chrome.** Manifest V3 y Chrome Web Store; sin Firefox ni otros navegadores (decisión de producto).
 - **Se rompe si Gmail cambia la página.** No hay API de reserva: toda la fragilidad vive en `src/gmail/`, con su README para re-mapear.
 - **Sin móvil.** La app de Gmail no admite extensiones.
 - **Solo lee lo que se ve.** La lista de conversaciones de la vista actual (bandeja, enviados, una búsqueda): unas 50-100 filas. No recorre el buzón entero.
