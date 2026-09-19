@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>correo-particular</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Tu correo, en tres listas</h1>
+    <p id="status" class="muted">Abre Gmail en una pestaña para que la extensión lea la lista.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button type="button" role="tab" data-tab="due" aria-selected="true">Qué vence</button>
+    <button type="button" role="tab" data-tab="categories" aria-selected="false">Qué es cada cosa</button>
+    <button type="button" role="tab" data-tab="owed" aria-selected="false">A quién debes respuesta</button>
+  </nav>
+
+  <section id="tab-due" role="tabpanel">
+    <ul id="due" class="list"></ul>
+    <p id="due-empty" class="muted empty">Nada con fecha o importe entre lo que se ve.</p>
+  </section>
+
+  <section id="tab-categories" role="tabpanel" hidden>
+    <ul id="categories" class="list"></ul>
+    <p id="categories-empty" class="muted empty">Todavía no hay nada leído.</p>
+  </section>
+
+  <section id="tab-owed" role="tabpanel" hidden>
+    <p class="setting">
+      <label for="owed-days">Sin contestar desde hace más de</label>
+      <input id="owed-days" type="number" min="1" max="90" step="1"> días
+    </p>
+    <ul id="owed" class="list"></ul>
+    <p id="owed-empty" class="muted empty">Nadie espera respuesta tuya, por lo que se ve en la lista.</p>
+  </section>
+
+  <footer>
+    <p class="muted">Reglas aplicadas en tu navegador. Nada sale de él. Las marcadas como «ejemplo» aún no se han comprobado con correos reales.</p>
+    <p class="muted">De los creadores de Newe.</p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

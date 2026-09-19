@@ -1,0 +1,111 @@
+:root {
+  --fg: #1f2328;
+  --muted: #59636e;
+  --line: #d9dee3;
+  --bg: #ffffff;
+  --bg-soft: #f5f7f9;
+  --accent: #2b4c7e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6e9ec;
+    --muted: #9aa4ae;
+    --line: #3a4148;
+    --bg: #1c2024;
+    --bg-soft: #262b30;
+    --accent: #9db8de;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 380px;
+  margin: 0;
+  padding: 12px 14px;
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+h1 { font-size: 15px; margin: 0 0 2px; font-weight: 600; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin: 10px 0 8px;
+  border-bottom: 1px solid var(--line);
+}
+.tabs button {
+  flex: 1;
+  padding: 6px 4px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+.tabs button[aria-selected="true"] {
+  color: var(--fg);
+  border-bottom-color: var(--accent);
+}
+
+.list { list-style: none; margin: 0; padding: 0; }
+.list li {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.list li:last-child { border-bottom: 0; }
+.row { display: flex; gap: 8px; align-items: baseline; }
+.row .grow { flex: 1; min-width: 0; }
+.subject {
+  display: block;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.strong { font-weight: 600; }
+.badge {
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.count {
+  min-width: 28px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.orgs { color: var(--muted); font-size: 12px; }
+
+.setting {
+  margin: 4px 0 8px;
+  color: var(--muted);
+}
+.setting input {
+  width: 52px;
+  padding: 2px 4px;
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.empty { padding: 10px 0; }
+[hidden] { display: none !important; }
+
+footer {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+footer p + p { margin-top: 4px; }

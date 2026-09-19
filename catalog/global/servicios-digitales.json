@@ -1,0 +1,55 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "global",
+  "rules": [
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "category": "shop",
+      "match": { "domains": ["amazon.es", "amazon.com", "amazon.de", "amazon.fr", "amazon.it", "amazon.co.uk"] },
+      "market": "global",
+      "verified": false,
+      "notes": "Los pedidos llegan desde subdominios; confirmar cuáles antes de afinar la categoría a delivery o return-window."
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "category": "notification",
+      "match": { "domains": ["paypal.com", "paypal.es"] },
+      "market": "global",
+      "verified": false
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "category": "subscription",
+      "match": { "domains": ["netflix.com", "account.netflix.com"] },
+      "market": "global",
+      "verified": false
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "subscription",
+      "match": { "domains": ["spotify.com"] },
+      "market": "global",
+      "verified": false
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "category": "subscription",
+      "match": { "domains": ["apple.com", "email.apple.com", "itunes.com"] },
+      "market": "global",
+      "verified": false
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "category": "notification",
+      "match": { "domains": ["google.com", "accounts.google.com"] },
+      "market": "global",
+      "verified": false
+    }
+  ]
+}

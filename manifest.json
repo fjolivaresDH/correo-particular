@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "correo-particular (nombre provisional)",
+  "version": "0.1.0",
+  "description": "Qué vence, qué es cada cosa y a quién debes respuesta. Reglas públicas aplicadas en tu navegador; nada sale de él.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "correo-particular",
+    "default_popup": "popup.html"
+  }
+}

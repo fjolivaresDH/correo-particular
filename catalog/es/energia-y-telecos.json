@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "iberdrola",
+      "name": "Iberdrola",
+      "category": "bill",
+      "match": { "domains": ["iberdrola.es", "iberdrola.com"], "subject": ["factura", "recibo"] },
+      "extract": { "amount": ["([0-9]{1,4},[0-9]{2}) ?€"] },
+      "market": "es",
+      "verified": false,
+      "notes": "Dominios de envío por confirmar contra correos reales."
+    },
+    {
+      "id": "endesa",
+      "name": "Endesa",
+      "category": "bill",
+      "match": { "domains": ["endesa.com", "endesa.es"], "subject": ["factura"] },
+      "extract": { "amount": ["([0-9]{1,4},[0-9]{2}) ?€"] },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "naturgy",
+      "name": "Naturgy",
+      "category": "bill",
+      "match": { "domains": ["naturgy.com", "naturgy.es"], "subject": ["factura"] },
+      "extract": { "amount": ["([0-9]{1,4},[0-9]{2}) ?€"] },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "movistar",
+      "name": "Movistar",
+      "category": "bill",
+      "match": { "domains": ["movistar.es", "telefonica.com"], "subject": ["factura"] },
+      "extract": { "amount": ["([0-9]{1,4},[0-9]{2}) ?€"] },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "vodafone",
+      "name": "Vodafone",
+      "category": "bill",
+      "match": { "domains": ["vodafone.es"], "subject": ["factura"] },
+      "extract": { "amount": ["([0-9]{1,4},[0-9]{2}) ?€"] },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "category": "bill",
+      "match": { "domains": ["orange.es"], "subject": ["factura"] },
+      "extract": { "amount": ["([0-9]{1,4},[0-9]{2}) ?€"] },
+      "market": "es",
+      "verified": false
+    }
+  ]
+}
