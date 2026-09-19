@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "description": "Qué vence, qué es cada cosa y a quién debes respuesta. Reglas públicas aplicadas en tu navegador; nada sale de él.",
   "permissions": ["storage"],
-  "host_permissions": ["https://mail.google.com/*"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://raw.githubusercontent.com/fjolivaresDH/correo-particular-catalogo/*"
+  ],
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/*"],

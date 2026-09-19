@@ -53,8 +53,10 @@ describe("extracción", () => {
 describe("motor sobre el catálogo sembrado", () => {
   const engine = createEngine(loadBundledCatalog());
 
-  it("carga las 12 reglas sembradas", () => {
-    expect(engine.ruleCount).toBe(12);
+  // El recuento EXACTO y que cuadre con el disco es de bundled.test.ts; aquí
+  // solo que el motor cargó el catálogo entero y no una lista suelta.
+  it("carga el catálogo empaquetado entero", () => {
+    expect(engine.ruleCount).toBeGreaterThan(200);
   });
 
   const cases: { sender: string; subject: string; ruleId: string; category: string; amount?: number; subjectMatched: boolean | null }[] = [
@@ -66,9 +68,9 @@ describe("motor sobre el catálogo sembrado", () => {
     { sender: "hola@orange.es", subject: "Factura de octubre", ruleId: "orange", category: "bill", subjectMatched: true },
     { sender: "order-update@amazon.es", subject: "Tu pedido ha sido enviado", ruleId: "amazon", category: "shop", subjectMatched: null },
     { sender: "service@paypal.com", subject: "Has recibido un pago", ruleId: "paypal", category: "notification", subjectMatched: null },
-    { sender: "info@account.netflix.com", subject: "Tu suscripción se renueva", ruleId: "netflix", category: "subscription", subjectMatched: null },
-    { sender: "no-reply@spotify.com", subject: "Your Premium plan renews", ruleId: "spotify", category: "subscription", subjectMatched: null },
-    { sender: "no_reply@email.apple.com", subject: "Tu recibo de Apple", ruleId: "apple", category: "subscription", subjectMatched: null },
+    { sender: "info@account.netflix.com", subject: "Tu suscripción se renueva", ruleId: "netflix", category: "subscription", subjectMatched: true },
+    { sender: "no-reply@spotify.com", subject: "Your Premium plan renews", ruleId: "spotify", category: "subscription", subjectMatched: true },
+    { sender: "no_reply@email.apple.com", subject: "Tu recibo de Apple", ruleId: "apple", category: "subscription", subjectMatched: true },
     { sender: "no-reply@accounts.google.com", subject: "Alerta de seguridad", ruleId: "google", category: "notification", subjectMatched: null },
   ];
 

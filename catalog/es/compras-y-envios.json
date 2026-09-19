@@ -1,0 +1,761 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "el-corte-ingles",
+      "name": "El Corte Inglés",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "elcorteingles.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "zara",
+      "name": "Zara",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "zara.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "mango.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "bershka",
+      "name": "Bershka",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "bershka.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "pull-and-bear",
+      "name": "Pull&Bear",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "pullandbear.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "stradivarius",
+      "name": "Stradivarius",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "stradivarius.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "massimo-dutti",
+      "name": "Massimo Dutti",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "massimodutti.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "oysho",
+      "name": "Oysho",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "oysho.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "cortefiel",
+      "name": "Cortefiel",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "cortefiel.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "springfield",
+      "name": "Springfield",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "myspringfield.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "decathlon",
+      "name": "Decathlon",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "decathlon.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "sprinter",
+      "name": "Sprinter",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "sprintersports.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mediamarkt",
+      "name": "MediaMarkt",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "mediamarkt.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "pccomponentes",
+      "name": "PcComponentes",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "pccomponentes.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "worten",
+      "name": "Worten",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "worten.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "fnac",
+      "name": "Fnac",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "fnac.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "carrefour",
+      "name": "Carrefour",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "carrefour.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mercadona",
+      "name": "Mercadona",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "mercadona.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "lidl",
+      "name": "Lidl",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "lidl.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "alcampo",
+      "name": "Alcampo",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "alcampo.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "dia",
+      "name": "Dia",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "dia.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "eroski",
+      "name": "Eroski",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "eroski.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "leroy-merlin",
+      "name": "Leroy Merlin",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "leroymerlin.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ikea",
+      "name": "IKEA",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "ikea.es",
+          "ikea.com"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "bricomart",
+      "name": "Bricomart",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "bricomart.es"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "primor",
+      "name": "Primor",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "primor.eu"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "druni",
+      "name": "Druni",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "druni.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "perfumes-club",
+      "name": "Perfume's Club",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "perfumesclub.com"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "zalando",
+      "name": "Zalando",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "zalando.es"
+        ],
+        "subject": [
+          "devoluci",
+          "cambio",
+          "plazo"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "wallapop",
+      "name": "Wallapop",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "wallapop.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "milanuncios",
+      "name": "Milanuncios",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "milanuncios.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "vinted",
+      "name": "Vinted",
+      "category": "shop",
+      "match": {
+        "domains": [
+          "vinted.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "correos",
+      "name": "Correos",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "correos.es"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega",
+          "paquete"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "correos-express",
+      "name": "Correos Express",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "correosexpress.com"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "seur",
+      "name": "SEUR",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "seur.com",
+          "seur.es"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mrw",
+      "name": "MRW",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "mrw.es"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "gls",
+      "name": "GLS",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "gls-spain.es",
+          "gls-group.eu"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "dhl",
+      "name": "DHL",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "dhl.com",
+          "dhl.es"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ups",
+      "name": "UPS",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "ups.com"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "fedex",
+      "name": "FedEx",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "fedex.com"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "nacex",
+      "name": "Nacex",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "nacex.es"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "envialia",
+      "name": "Envialia",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "envialia.com"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "tipsa",
+      "name": "Tipsa",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "tip-sa.com"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ctt-express",
+      "name": "CTT Express",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "cttexpress.com"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "packlink",
+      "name": "Packlink",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "packlink.es",
+          "packlink.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "inpost",
+      "name": "InPost",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "inpost.es"
+        ],
+        "subject": [
+          "env[ií]o",
+          "entrega",
+          "punto"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "glovo",
+      "name": "Glovo",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "glovoapp.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "just-eat",
+      "name": "Just Eat",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "just-eat.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "uber-eats",
+      "name": "Uber Eats",
+      "category": "delivery",
+      "match": {
+        "domains": [
+          "ubereats.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    }
+  ]
+}

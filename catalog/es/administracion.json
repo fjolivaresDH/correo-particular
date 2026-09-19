@@ -1,0 +1,462 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "agencia-tributaria",
+      "name": "Agencia Tributaria",
+      "category": "government",
+      "match": {
+        "domains": [
+          "agenciatributaria.gob.es",
+          "agenciatributaria.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "seguridad-social",
+      "name": "Seguridad Social",
+      "category": "government",
+      "match": {
+        "domains": [
+          "seg-social.es",
+          "seg-social.gob.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "dgt",
+      "name": "DGT",
+      "category": "government",
+      "match": {
+        "domains": [
+          "dgt.es"
+        ],
+        "subject": [
+          "multa",
+          "sanci",
+          "itv",
+          "permiso"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "sepe",
+      "name": "SEPE",
+      "category": "government",
+      "match": {
+        "domains": [
+          "sepe.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "catastro",
+      "name": "Catastro",
+      "category": "government",
+      "match": {
+        "domains": [
+          "sedecatastro.gob.es",
+          "catastro.meh.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "notificaciones-060",
+      "name": "Notificaciones electrónicas",
+      "category": "government",
+      "match": {
+        "domains": [
+          "notificaciones.060.es",
+          "060.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "administracion-gob",
+      "name": "Carpeta Ciudadana",
+      "category": "government",
+      "match": {
+        "domains": [
+          "administracion.gob.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "boe",
+      "name": "BOE",
+      "category": "government",
+      "match": {
+        "domains": [
+          "boe.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ine",
+      "name": "INE",
+      "category": "government",
+      "match": {
+        "domains": [
+          "ine.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "muface",
+      "name": "MUFACE",
+      "category": "government",
+      "match": {
+        "domains": [
+          "muface.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "fnmt",
+      "name": "FNMT",
+      "category": "government",
+      "match": {
+        "domains": [
+          "fnmt.es",
+          "cert.fnmt.es"
+        ],
+        "subject": [
+          "certificado",
+          "caduc",
+          "renovaci"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-madrid",
+      "name": "Ayuntamiento de Madrid",
+      "category": "government",
+      "match": {
+        "domains": [
+          "madrid.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-barcelona",
+      "name": "Ajuntament de Barcelona",
+      "category": "government",
+      "match": {
+        "domains": [
+          "barcelona.cat"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-valencia",
+      "name": "Ajuntament de València",
+      "category": "government",
+      "match": {
+        "domains": [
+          "valencia.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-sevilla",
+      "name": "Ayuntamiento de Sevilla",
+      "category": "government",
+      "match": {
+        "domains": [
+          "sevilla.org"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-zaragoza",
+      "name": "Ayuntamiento de Zaragoza",
+      "category": "government",
+      "match": {
+        "domains": [
+          "zaragoza.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-malaga",
+      "name": "Ayuntamiento de Málaga",
+      "category": "government",
+      "match": {
+        "domains": [
+          "malaga.eu"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-murcia",
+      "name": "Ayuntamiento de Murcia",
+      "category": "government",
+      "match": {
+        "domains": [
+          "murcia.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ayuntamiento-bilbao",
+      "name": "Ayuntamiento de Bilbao",
+      "category": "government",
+      "match": {
+        "domains": [
+          "bilbao.eus"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "generalitat-catalunya",
+      "name": "Generalitat de Catalunya",
+      "category": "government",
+      "match": {
+        "domains": [
+          "gencat.cat"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "comunidad-madrid",
+      "name": "Comunidad de Madrid",
+      "category": "government",
+      "match": {
+        "domains": [
+          "comunidad.madrid"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "junta-andalucia",
+      "name": "Junta de Andalucía",
+      "category": "government",
+      "match": {
+        "domains": [
+          "juntadeandalucia.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "generalitat-valenciana",
+      "name": "Generalitat Valenciana",
+      "category": "government",
+      "match": {
+        "domains": [
+          "gva.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "xunta-galicia",
+      "name": "Xunta de Galicia",
+      "category": "government",
+      "match": {
+        "domains": [
+          "xunta.gal",
+          "xunta.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "gobierno-vasco",
+      "name": "Gobierno Vasco",
+      "category": "government",
+      "match": {
+        "domains": [
+          "euskadi.eus"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "registradores",
+      "name": "Registradores de España",
+      "category": "government",
+      "match": {
+        "domains": [
+          "registradores.org"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "correos-notificaciones",
+      "name": "Correos notificaciones",
+      "category": "government",
+      "match": {
+        "domains": [
+          "notificaciones.correos.es"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    }
+  ]
+}

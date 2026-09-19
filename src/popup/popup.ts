@@ -1,9 +1,16 @@
 // Popup: lee `chrome.storage.local` (lo que dejó el content script) y pinta
-// las tres listas con los módulos puros de `src/aha/`. No toca Gmail ni la
-// red. Texto en castellano; sin marca más allá del pie.
+// las tres listas con los módulos puros de `src/aha/`. No toca Gmail.
+// Texto en castellano; sin marca más allá del pie.
+//
+// Lo único que sale a la red en toda la extensión se dispara AQUÍ, al abrir el
+// popup: `refreshCatalog()` se trae el catálogo público como mucho una vez al
+// día. Es a propósito que lo dispare una persona abriendo una ventana y no un
+// reloj en segundo plano (ver la cabecera de `src/catalog/update/`). No se
+// espera a que termine: lo que se descargue hoy lo usará el barrido siguiente.
 
 import { computeAha } from "../aha/index";
 import type { CategoryKey } from "../aha/categories";
+import { refreshCatalog } from "../catalog/update/index";
 import { DEFAULT_SETTINGS, type ScanResult, type Settings, STORAGE_KEYS } from "../shared/types";
 
 const CATEGORY_LABELS: Record<CategoryKey, string> = {
@@ -149,6 +156,7 @@ function selectTab(name: string): void {
 }
 
 async function main(): Promise<void> {
+  void refreshCatalog();
   const stored = await chrome.storage.local.get([STORAGE_KEYS.scan, STORAGE_KEYS.settings]);
   let scan = (stored[STORAGE_KEYS.scan] as ScanResult | undefined) ?? null;
   const settings: Settings = { ...DEFAULT_SETTINGS, ...(stored[STORAGE_KEYS.settings] as Partial<Settings> | undefined) };

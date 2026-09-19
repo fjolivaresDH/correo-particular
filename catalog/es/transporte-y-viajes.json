@@ -1,0 +1,489 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "renfe",
+      "name": "Renfe",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "renfe.com",
+          "renfe.es"
+        ],
+        "subject": [
+          "billete",
+          "viaje",
+          "salida"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ouigo",
+      "name": "Ouigo",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "ouigo.com"
+        ],
+        "subject": [
+          "billete",
+          "viaje"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "iryo",
+      "name": "Iryo",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "iryo.eu"
+        ],
+        "subject": [
+          "billete",
+          "viaje"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "alsa",
+      "name": "ALSA",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "alsa.es",
+          "alsa.com"
+        ],
+        "subject": [
+          "billete",
+          "viaje"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "avanza",
+      "name": "Avanza",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "avanzabus.com"
+        ],
+        "subject": [
+          "billete",
+          "viaje"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "flixbus",
+      "name": "FlixBus",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "flixbus.es",
+          "flixbus.com"
+        ],
+        "subject": [
+          "billete",
+          "viaje"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "iberia",
+      "name": "Iberia",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "iberia.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva",
+          "facturaci"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "vueling",
+      "name": "Vueling",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "vueling.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "air-europa",
+      "name": "Air Europa",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "aireuropa.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ryanair",
+      "name": "Ryanair",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "ryanair.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva",
+          "check"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "easyjet",
+      "name": "easyJet",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "easyjet.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "binter",
+      "name": "Binter",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "bintercanarias.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "edreams",
+      "name": "eDreams",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "edreams.es",
+          "edreams.com"
+        ],
+        "subject": [
+          "vuelo",
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "logitravel",
+      "name": "Logitravel",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "logitravel.com"
+        ],
+        "subject": [
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "halcon-viajes",
+      "name": "Halcón Viajes",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "halconviajes.com"
+        ],
+        "subject": [
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "viajes-el-corte-ingles",
+      "name": "Viajes El Corte Inglés",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "viajeselcorteingles.es"
+        ],
+        "subject": [
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "blablacar",
+      "name": "BlaBlaCar",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "blablacar.es",
+          "blablacar.com"
+        ],
+        "subject": [
+          "viaje",
+          "reserva"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "cabify",
+      "name": "Cabify",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "cabify.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "uber.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "bolt.eu"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "free-now",
+      "name": "FREE NOW",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "free-now.com"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "aena",
+      "name": "Aena",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "aena.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "parclick",
+      "name": "Parclick",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "parclick.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "emt-madrid",
+      "name": "EMT Madrid",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "emtmadrid.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "tmb",
+      "name": "TMB Barcelona",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "tmb.cat"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    }
+  ]
+}

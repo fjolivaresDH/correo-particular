@@ -1,0 +1,442 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "quironsalud",
+      "name": "Quirónsalud",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "quironsalud.es",
+          "quironsalud.com"
+        ],
+        "subject": [
+          "cita",
+          "consulta",
+          "resultado"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "vithas",
+      "name": "Vithas",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "vithas.es"
+        ],
+        "subject": [
+          "cita",
+          "consulta"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "hm-hospitales",
+      "name": "HM Hospitales",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "hmhospitales.com"
+        ],
+        "subject": [
+          "cita",
+          "consulta"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "clinica-baviera",
+      "name": "Clínica Baviera",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "clinicabaviera.com"
+        ],
+        "subject": [
+          "cita",
+          "revisi"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "vitaldent",
+      "name": "Vitaldent",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "vitaldent.com"
+        ],
+        "subject": [
+          "cita",
+          "revisi"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "clinicas-dentales-adeslas",
+      "name": "Adeslas Dental",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "adeslasdental.es"
+        ],
+        "subject": [
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "salud-madrid",
+      "name": "Salud Madrid",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "salud.madrid.org"
+        ],
+        "subject": [
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "catsalut",
+      "name": "CatSalut",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "catsalut.gencat.cat"
+        ],
+        "subject": [
+          "cita",
+          "visita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "securitas-direct",
+      "name": "Securitas Direct",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "securitasdirect.es"
+        ],
+        "subject": [
+          "factura",
+          "recibo",
+          "tu factura",
+          "factura de"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "prosegur-alarmas",
+      "name": "Prosegur Alarmas",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "prosegur.es",
+          "prosegur.com"
+        ],
+        "subject": [
+          "factura",
+          "recibo",
+          "tu factura",
+          "factura de"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "movistar-prosegur",
+      "name": "Movistar Prosegur Alarmas",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "movistarprosegualarmas.es"
+        ],
+        "subject": [
+          "factura",
+          "recibo",
+          "tu factura",
+          "factura de"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "norauto",
+      "name": "Norauto",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "norauto.es"
+        ],
+        "subject": [
+          "cita",
+          "revisi",
+          "taller"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "midas",
+      "name": "Midas",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "midas.es"
+        ],
+        "subject": [
+          "cita",
+          "revisi",
+          "taller"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "aurgi",
+      "name": "Aurgi",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "aurgi.com"
+        ],
+        "subject": [
+          "cita",
+          "revisi"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "applus-itv",
+      "name": "Applus ITV",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "applusiteuve.com",
+          "applus.com"
+        ],
+        "subject": [
+          "itv",
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "itevelesa",
+      "name": "Itevelesa",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "itevelesa.com"
+        ],
+        "subject": [
+          "itv",
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "sinae-itv",
+      "name": "Sinae ITV",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "sinae.es"
+        ],
+        "subject": [
+          "itv",
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "rastreator",
+      "name": "Rastreator",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "rastreator.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "idealista",
+      "name": "Idealista",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "idealista.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "fotocasa",
+      "name": "Fotocasa",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "fotocasa.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "habitaclia",
+      "name": "Habitaclia",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "habitaclia.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    }
+  ]
+}

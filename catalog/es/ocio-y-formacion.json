@@ -1,0 +1,448 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "movistar-plus",
+      "name": "Movistar Plus+",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "movistarplus.es"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "filmin",
+      "name": "Filmin",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "filmin.es"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "dazn",
+      "name": "DAZN",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "dazn.com"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "basic-fit",
+      "name": "Basic-Fit",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "basic-fit.com"
+        ],
+        "subject": [
+          "cuota",
+          "suscripci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mcfit",
+      "name": "McFIT",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "mcfit.com"
+        ],
+        "subject": [
+          "cuota",
+          "suscripci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "altafit",
+      "name": "Altafit",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "altafitgymclub.com"
+        ],
+        "subject": [
+          "cuota"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "vivagym",
+      "name": "VivaGym",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "vivagym.es"
+        ],
+        "subject": [
+          "cuota"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "metropolitan",
+      "name": "Metropolitan",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "clubmetropolitan.net"
+        ],
+        "subject": [
+          "cuota"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "gympass",
+      "name": "Wellhub",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "gympass.com",
+          "wellhub.com"
+        ],
+        "subject": [
+          "suscripci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "decathlon-actividades",
+      "name": "Decathlon Actividades",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "activities.decathlon.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "uned",
+      "name": "UNED",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "uned.es"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "uoc",
+      "name": "UOC",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "uoc.edu"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "domestika",
+      "name": "Domestika",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "domestika.org"
+        ],
+        "subject": [
+          "suscripci",
+          "curso"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "elpais",
+      "name": "El País",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "elpais.com"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "elmundo",
+      "name": "El Mundo",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "elmundo.es"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "lavanguardia",
+      "name": "La Vanguardia",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "lavanguardia.com"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "eldiario",
+      "name": "elDiario.es",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "eldiario.es"
+        ],
+        "subject": [
+          "suscripci",
+          "socio"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "abc",
+      "name": "ABC",
+      "category": "subscription",
+      "match": {
+        "domains": [
+          "abc.es"
+        ],
+        "subject": [
+          "suscripci",
+          "renovaci"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "marca",
+      "name": "Marca",
+      "category": "newsletter",
+      "match": {
+        "domains": [
+          "marca.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "xataka",
+      "name": "Xataka",
+      "category": "newsletter",
+      "match": {
+        "domains": [
+          "xataka.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ticketmaster",
+      "name": "Ticketmaster",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "ticketmaster.es"
+        ],
+        "subject": [
+          "entrada",
+          "evento"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "entradas-com",
+      "name": "Entradas.com",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "entradas.com"
+        ],
+        "subject": [
+          "entrada",
+          "evento"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "atrapalo",
+      "name": "Atrápalo",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "atrapalo.com"
+        ],
+        "subject": [
+          "reserva",
+          "entrada"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "fever",
+      "name": "Fever",
+      "category": "appointment",
+      "match": {
+        "domains": [
+          "feverup.com"
+        ],
+        "subject": [
+          "entrada",
+          "evento"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "cruz-roja",
+      "name": "Cruz Roja",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "cruzroja.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "unicef-espana",
+      "name": "UNICEF España",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "unicef.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "greenpeace-espana",
+      "name": "Greenpeace España",
+      "category": "notification",
+      "match": {
+        "domains": [
+          "greenpeace.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    }
+  ]
+}

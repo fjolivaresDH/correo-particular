@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/index.schema.json",
+  "version": 1,
+  "lists": [
+    "es/administracion.json",
+    "es/banca-y-seguros.json",
+    "es/compras-y-envios.json",
+    "es/energia-y-telecos.json",
+    "es/ocio-y-formacion.json",
+    "es/salud-hogar-y-vehiculo.json",
+    "es/transporte-y-viajes.json",
+    "global/servicios-digitales.json"
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "$schema": "../../schema/list.schema.json",
+  "market": "es",
+  "rules": [
+    {
+      "id": "santander",
+      "name": "Banco Santander",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "santander.es",
+          "bancosantander.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "bbva",
+      "name": "BBVA",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "bbva.es",
+          "bbva.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "caixabank",
+      "name": "CaixaBank",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "caixabank.es",
+          "caixabank.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "sabadell",
+      "name": "Banco Sabadell",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "bancsabadell.com",
+          "bancosabadell.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "bankinter",
+      "name": "Bankinter",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "bankinter.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "unicaja",
+      "name": "Unicaja",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "unicajabanco.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ibercaja",
+      "name": "Ibercaja",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "ibercaja.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "kutxabank",
+      "name": "Kutxabank",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "kutxabank.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "abanca",
+      "name": "Abanca",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "abanca.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "cajamar",
+      "name": "Cajamar",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "cajamar.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "laboral-kutxa",
+      "name": "Laboral Kutxa",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "laboralkutxa.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ing",
+      "name": "ING",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "ing.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "openbank",
+      "name": "Openbank",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "openbank.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "evo-banco",
+      "name": "EVO Banco",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "evobanco.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "imagin",
+      "name": "imagin",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "imagin.com"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "myinvestor",
+      "name": "MyInvestor",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "myinvestor.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "renta-4",
+      "name": "Renta 4",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "r4.com",
+          "renta4.com"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "wizink",
+      "name": "WiZink",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "wizink.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "cetelem",
+      "name": "Cetelem",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "cetelem.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "cofidis",
+      "name": "Cofidis",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "cofidis.es"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "caja-rural",
+      "name": "Caja Rural",
+      "category": "bank",
+      "match": {
+        "domains": [
+          "cajarural.com"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mapfre",
+      "name": "Mapfre",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "mapfre.es",
+          "mapfre.com"
+        ],
+        "subject": [
+          "recibo",
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mutua-madrilena",
+      "name": "Mutua Madrileña",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "mutua.es"
+        ],
+        "subject": [
+          "recibo",
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "allianz",
+      "name": "Allianz",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "allianz.es"
+        ],
+        "subject": [
+          "recibo",
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "axa",
+      "name": "AXA",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "axa.es"
+        ],
+        "subject": [
+          "recibo",
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "generali",
+      "name": "Generali",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "generali.es"
+        ],
+        "subject": [
+          "recibo",
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich",
+      "category": "bill",
+      "match": {
+        "domains": [
+          "zurich.es"
+        ],
+        "subject": [
+          "recibo",
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "amount": [
+          "([0-9]{1,4},[0-9]{2}) ?€",
+          "([0-9]{1,4}\\.[0-9]{3},[0-9]{2}) ?€"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "linea-directa",
+      "name": "Línea Directa",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "lineadirecta.com"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "pelayo",
+      "name": "Pelayo",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "pelayo.com"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "reale",
+      "name": "Reale Seguros",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "reale.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "catalana-occidente",
+      "name": "Catalana Occidente",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "seguroscatalanaoccidente.com"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "santalucia",
+      "name": "Santalucía",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "santalucia.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "ocaso",
+      "name": "Ocaso",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "ocaso.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "helvetia",
+      "name": "Helvetia",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "helvetia.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "caser",
+      "name": "Caser",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "caser.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "dkv",
+      "name": "DKV Seguros",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "dkvseguros.com",
+          "dkv.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "sanitas",
+      "name": "Sanitas",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "sanitas.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza",
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "segurcaixa-adeslas",
+      "name": "SegurCaixa Adeslas",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "segurcaixaadeslas.es",
+          "adeslas.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza",
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "asisa",
+      "name": "Asisa",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "asisa.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza",
+          "cita"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "mutua-general-catalunya",
+      "name": "Mútua General de Catalunya",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "mgc.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "notes": "Dominio de envío por confirmar contra correos reales.",
+      "market": "es",
+      "verified": false
+    },
+    {
+      "id": "verti",
+      "name": "Verti",
+      "category": "renewal",
+      "match": {
+        "domains": [
+          "verti.es"
+        ],
+        "subject": [
+          "renovaci",
+          "p[oó]liza"
+        ]
+      },
+      "extract": {
+        "dueDate": [
+          "(\\d{1,2} de [a-záéíóúñ]+(?: de \\d{4})?)",
+          "(\\d{1,2}/\\d{1,2}/\\d{2,4})"
+        ]
+      },
+      "market": "es",
+      "verified": false
+    }
+  ]
+}
