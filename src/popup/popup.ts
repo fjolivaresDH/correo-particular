@@ -9,6 +9,7 @@
 // espera a que termine: lo que se descargue hoy lo usará el barrido siguiente.
 
 import { computeAha } from "../aha/index";
+import { proposalCandidates, proposeHref, type ProposalCandidate } from "../aha/propose";
 import type { CategoryKey } from "../aha/categories";
 import { refreshCatalog } from "../catalog/update/index";
 import { DEFAULT_SETTINGS, type ScanResult, type Settings, STORAGE_KEYS } from "../shared/types";
@@ -75,6 +76,7 @@ function render(scan: ScanResult | null, settings: Settings): void {
     el("due-empty").hidden = false;
     el("categories-empty").hidden = false;
     el("owed-empty").hidden = false;
+    el("propose").hidden = true;
     return;
   }
 
@@ -128,6 +130,7 @@ function render(scan: ScanResult | null, settings: Settings): void {
     catList.append(row);
   }
   el("categories-empty").hidden = aha.categories.length > 0;
+  renderPropose(proposalCandidates(scan.rows));
 
   for (const item of aha.owed) {
     const row = li();
@@ -143,6 +146,50 @@ function render(scan: ScanResult | null, settings: Settings): void {
     owedList.append(row);
   }
   el("owed-empty").hidden = aha.owed.length > 0;
+}
+
+// PROPONER UN REMITENTE. Lo único de la extensión que lleva algo tuyo fuera del
+// navegador, y por eso se hace así y no de otra forma:
+//
+//   - **Lo manda la persona, no nosotros.** El botón abre GitHub en otra pestaña
+//     con el texto ya escrito; el envío lo hace ella, en su sesión. Aquí no hay
+//     `fetch` (lo prohíbe `npm run check:no-network` fuera de catalog/update/).
+//   - **Viaja SOLO el dominio.** Ni la dirección, ni el asunto, ni el nombre de
+//     quien escribe. El asunto de ejemplo que se ve en la lista se queda en el
+//     popup: sirve para que la persona reconozca de qué habla y no sale de aquí.
+//   - **El correo personal no se propone**, lo filtra `aha/propose.ts` antes de
+//     llegar hasta aquí.
+//
+// La URL y el texto viven en `aha/propose.ts`, con su test: lo que viaja es una
+// decisión sobre datos, no pintura.
+function renderPropose(candidates: ProposalCandidate[]): void {
+  const section = el<HTMLElement>("propose");
+  const list = el<HTMLUListElement>("propose-list");
+  list.replaceChildren();
+  section.hidden = candidates.length === 0;
+  for (const c of candidates) {
+    const row = li();
+    const line = document.createElement("div");
+    line.className = "row";
+    const grow = document.createElement("span");
+    grow.className = "grow";
+    grow.append(span("strong", c.domain));
+    grow.append(span("subject", c.sampleSubject));
+    line.append(grow);
+    line.append(span("count", String(c.count)));
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "propose-button";
+    button.textContent = "Proponer";
+    button.addEventListener("click", () => {
+      // Pestaña nueva, gesto de la persona. Si la API de pestañas no está
+      // (popup abierto fuera de la extensión, en una prueba), no se rompe.
+      void chrome.tabs?.create?.({ url: proposeHref(c.domain) });
+    });
+    line.append(button);
+    row.append(line);
+    list.append(row);
+  }
 }
 
 function selectTab(name: string): void {

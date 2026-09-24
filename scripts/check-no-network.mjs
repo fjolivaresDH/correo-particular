@@ -43,6 +43,16 @@ const ALLOWED_HOSTS = new Set([
 ]);
 /** La única URL de red que puede aparecer escrita en `src/`. */
 const CATALOG_URL = "https://raw.githubusercontent.com/fjolivaresDH/correo-particular-catalogo/";
+/**
+ * La única URL a la que puede NAVEGAR la persona con un clic: proponer un
+ * remitente al catálogo. No es lo mismo que pedir algo por la red y por eso va
+ * aparte — nadie la llama en segundo plano; abre una pestaña con el texto ya
+ * escrito y el envío lo hace ella, en su sesión de GitHub. Para que la
+ * distinción sea real y no una promesa, esta URL tiene PROHIBIDO aparecer
+ * dentro de `src/catalog/update/`, que es la única carpeta donde vive `fetch`:
+ * así no queda ningún sitio del código donde las dos cosas puedan juntarse.
+ */
+const PROPOSE_URL = "https://github.com/fjolivaresDH/correo-particular-catalogo/issues/new";
 /** Lo único que `src/catalog/update/` puede importar. */
 const UPDATE_IMPORTS = new Set(["../validate", "../../rules/types"]);
 
@@ -66,14 +76,24 @@ function walk(dir) {
     const esTest = /\.test\.ts$/.test(entry);
     // Una URL http(s) escrita en cualquier parte de `src/` que no sea la del
     // catálogo es una salida a la red esperando a que alguien la use.
+    const enUpdate = p.startsWith(ALLOWED_DIR + path.sep);
     if (!esTest) {
       for (const m of text.matchAll(/https?:\/\/[^\s"'`)]+/g)) {
-        if (!m[0].startsWith(CATALOG_URL) && !m[0].startsWith("https://mail.google.com")) {
-          problems.push(`${rel}: URL de red que no es el catálogo «${m[0]}»`);
+        const url = m[0];
+        const permitida =
+          url.startsWith(CATALOG_URL) ||
+          url.startsWith("https://mail.google.com") ||
+          (url.startsWith(PROPOSE_URL) && !enUpdate);
+        if (!permitida) {
+          problems.push(
+            url.startsWith(PROPOSE_URL)
+              ? `${rel}: la URL de proponer no puede vivir en la carpeta que sí sale a la red`
+              : `${rel}: URL de red que no es el catálogo «${url}»`,
+          );
         }
       }
     }
-    if (p.startsWith(ALLOWED_DIR + path.sep)) {
+    if (enUpdate) {
       if (esTest) continue;
       for (const m of text.matchAll(/^\s*import[^"']*["']([^"']+)["']/gm)) {
         if (!UPDATE_IMPORTS.has(m[1])) {

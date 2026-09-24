@@ -8,7 +8,12 @@ Extensión de navegador que lee tu Gmail **en tu propio navegador** y te dice tr
 
 Sin inteligencia artificial y sin que nadie lea tu correo: todo son **reglas deterministas** que se aplican en local, a partir de un [catálogo público de remitentes](https://github.com/fjolivaresDH/correo-particular-catalogo) que crece con la colaboración de todos.
 
-**Qué sale de tu navegador y qué no.** Tu correo, no: ni el remitente, ni el asunto, ni una cuenta, ni una estadística. Lo único que viaja es **una descarga del catálogo público**, como quien baja una actualización: un GET a un fichero de GitHub, sin parámetros, sin decir quién eres y como mucho una vez al día, cuando abres el popup. Lo comprueba `npm run check:no-network` y está explicado en `src/catalog/update/`.
+**Qué sale de tu navegador y qué no.** Tu correo, no: ni el remitente, ni el asunto, ni una cuenta, ni una estadística. Solo dos cosas viajan, y las dos se pueden mirar:
+
+1. **La descarga del catálogo público**, como quien baja una actualización: un GET a un fichero de GitHub, sin parámetros, sin decir quién eres y como mucho una vez al día, cuando abres el popup.
+2. **Lo que tú propongas.** Si un remitente no está descrito, la extensión te lo enseña y puedes proponerlo: se abre GitHub en otra pestaña con el texto escrito y **lo envías tú**. Viaja *solo el dominio* —`tienda.example`, nunca `avisos@tienda.example`— y nunca el asunto. El correo personal (Gmail, Outlook, Yahoo…) no se propone siquiera.
+
+Lo comprueba `npm run check:no-network`, y lo que viaja en una propuesta tiene su propio test (`src/aha/propose.test.ts`: en esa URL no cabe una dirección).
 
 ## Cómo funciona, en tres líneas
 
@@ -63,6 +68,7 @@ src/
     README.md           cómo re-mapear cuando se rompa
   rules/                motor de reglas: puro, sin DOM (dominio + asunto + extracción)
   aha/                  las tres listas, puras
+    propose.ts          qué remitentes se pueden proponer y qué viaja al hacerlo
   catalog/              de dónde salen las reglas: lo descargado si lo hay, si no lo empaquetado
     bundled.ts          GENERADO por `catalog:sync`: enumera las listas empaquetadas
     validate.ts         validación ligera, la MISMA para lo empaquetado y lo descargado
@@ -84,6 +90,7 @@ scripts/                check-no-network, sync-catalog
 - **Solo el asunto.** Fecha e importe se extraen del asunto, nunca del cuerpo. Un recibo cuyo asunto no lleva el importe aparece sin él.
 - **Catálogo sin verificar.** Hoy son 279 remitentes sembrados, **todos** marcados «ejemplo» hasta que alguien los compruebe con correos reales: los dominios salen de lo que se sabe de cada organización, no de haber visto sus correos, y alguno estará mal (los más dudosos lo dicen en su nota). Una regla equivocada no hace daño —como mucho no reconoce a nadie—, pero el aha depende de que el catálogo se verifique y crezca.
 - **El catálogo se actualiza solo, una vez al día,** al abrir el popup. Si la descarga falla se sigue con el que va empaquetado; nunca te quedas sin reglas.
+- **Proponer un remitente abre GitHub; no lo manda la extensión.** Hace falta cuenta de GitHub, y la propuesta se revisa antes de publicarse. Es el camino por el que el catálogo crece.
 
 ## Lo que no hace en la versión gratis
 
@@ -95,4 +102,4 @@ Por menos de 1 € al mes, una IA que lee **solo** lo que las reglas ya marcaron
 
 ## Estado
 
-**Esqueleto funcional (septiembre de 2026).** 279 reglas sembradas y actualización automática del catálogo. Nombre provisional; licencia por decidir. De los creadores de Newe.
+**Esqueleto funcional (septiembre de 2026).** 279 reglas sembradas, actualización automática del catálogo y botón para proponer remitentes. Nombre provisional; licencia por decidir. De los creadores de Newe.
