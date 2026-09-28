@@ -11,7 +11,7 @@ Sin inteligencia artificial y sin que nadie lea tu correo: todo son **reglas det
 **Qué sale de tu navegador y qué no.** Tu correo, no: ni el remitente, ni el asunto, ni una cuenta, ni una estadística. Solo dos cosas viajan, y las dos se pueden mirar:
 
 1. **La descarga del catálogo público**, como quien baja una actualización: un GET a un fichero de GitHub, sin parámetros, sin decir quién eres y como mucho una vez al día, cuando abres el popup.
-2. **Lo que tú propongas.** Si un remitente no está descrito, la extensión te lo enseña y puedes proponerlo: se abre GitHub en otra pestaña con el texto escrito y **lo envías tú**. Viaja *solo el dominio* —`tienda.example`, nunca `avisos@tienda.example`— y nunca el asunto. El correo personal (Gmail, Outlook, Yahoo…) no se propone siquiera.
+2. **Lo que tú propongas.** Si un remitente no está descrito, la extensión te lo enseña y puedes proponerlo: se abre nuestra página de propuestas en otra pestaña con el dominio ya puesto y **lo envías tú**, sin dar tu nombre ni tu correo. Viaja *solo el dominio* —`tienda.example`, nunca `avisos@tienda.example`— y nunca el asunto. El correo personal (Gmail, Outlook, Yahoo…) no se propone siquiera.
 
 Lo comprueba `npm run check:no-network`, y lo que viaja en una propuesta tiene su propio test (`src/aha/propose.test.ts`: en esa URL no cabe una dirección).
 
@@ -90,11 +90,11 @@ scripts/                check-no-network, sync-catalog
 - **Solo el asunto.** Fecha e importe se extraen del asunto, nunca del cuerpo. Un recibo cuyo asunto no lleva el importe aparece sin él.
 - **Catálogo sin verificar.** Hoy son 279 remitentes sembrados, **todos** marcados «ejemplo» hasta que alguien los compruebe con correos reales: los dominios salen de lo que se sabe de cada organización, no de haber visto sus correos, y alguno estará mal (los más dudosos lo dicen en su nota). Una regla equivocada no hace daño —como mucho no reconoce a nadie—, pero el aha depende de que el catálogo se verifique y crezca.
 - **El catálogo se actualiza solo, una vez al día,** al abrir el popup. Si la descarga falla se sigue con el que va empaquetado; nunca te quedas sin reglas.
-- **Proponer un remitente abre GitHub; no lo manda la extensión.** Hace falta cuenta de GitHub, y la propuesta se revisa antes de publicarse. Es el camino por el que el catálogo crece.
+- **Proponer un remitente abre una página nuestra; no lo manda la extensión.** Esa página recibe solo el dominio y lo que tú escribas en ella, no pide cuenta ni correo, y la propuesta se revisa antes de publicarse. Es el camino por el que el catálogo crece.
 
 ## Lo que no hace en la versión gratis
 
-No usa IA. No envía correo. No lee tu buzón desde fuera. No manda nada de tu correo a ningún servidor, tampoco a los nuestros — de hecho no tenemos servidor: lo único que hay al otro lado es un repositorio público de reglas en GitHub.
+No usa IA. No envía correo. No lee tu buzón desde fuera. No manda nada de tu correo a ningún servidor, tampoco a los nuestros : al otro lado solo hay un repositorio público de reglas en GitHub y una página donde recibimos los remitentes que tú decidas proponer, sin nada de tu correo.
 
 ## Tramo de pago (después)
 

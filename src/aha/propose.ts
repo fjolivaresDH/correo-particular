@@ -98,23 +98,21 @@ export function isPersonalDomain(domain: string): boolean {
 // (`propose.test.ts` comprueba que en la URL no cabe ni una dirección ni un
 // asunto). El popup solo abre lo que esta función devuelve.
 //
-// La URL es FIJA y del repositorio público del catálogo. No se PIDE por la red:
-// la abre la persona en una pestaña, con un clic, y el envío lo hace ella desde
-// su sesión de GitHub. `check-no-network` la declara como la única dirección de
-// navegación permitida, y le prohíbe aparecer en la carpeta que sí sale a la red.
-export const PROPOSE_URL = "https://github.com/fjolivaresDH/correo-particular-catalogo/issues/new";
+// La URL es FIJA: la página de propuestas (repositorio privado
+// `correo-particular-propuestas`, sep-2026; antes era una incidencia de GitHub,
+// que obligaba a tener cuenta allí). No se PIDE por la red: la abre la persona
+// en una pestaña, con un clic, y el envío lo hace ella desde esa página, que no
+// pide ni su nombre ni su correo. `check-no-network` la declara como la única
+// dirección de navegación permitida, y le prohíbe aparecer en la carpeta que sí
+// sale a la red.
+export const PROPOSE_URL = "https://correo-particular-propuestas.vercel.app/proponer";
 
-/** El enlace de propuesta para un dominio. Lo único que lleva es el dominio. */
+/**
+ * El enlace de propuesta para un dominio. Lleva UN parámetro, el dominio, y
+ * nada más: lo demás (qué organización es, qué suele mandar) lo escribe la
+ * persona en la página, si quiere.
+ */
 export function proposeHref(domain: string): string {
-  const limpio = domain.trim().toLowerCase();
-  const cuerpo = [
-    `Dominio: ${limpio}`,
-    "",
-    "Qué organización es:",
-    "Qué suele mandar (recibo, renovación, cita, boletín...):",
-    "",
-    "Propuesto desde la extensión. No incluye ninguna dirección ni contenido de correo.",
-  ].join("\n");
-  const q = new URLSearchParams({ title: `Remitente: ${limpio}`, body: cuerpo });
+  const q = new URLSearchParams({ dominio: domain.trim().toLowerCase() });
   return `${PROPOSE_URL}?${q.toString()}`;
 }

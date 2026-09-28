@@ -151,8 +151,8 @@ function render(scan: ScanResult | null, settings: Settings): void {
 // PROPONER UN REMITENTE. Lo único de la extensión que lleva algo tuyo fuera del
 // navegador, y por eso se hace así y no de otra forma:
 //
-//   - **Lo manda la persona, no nosotros.** El botón abre GitHub en otra pestaña
-//     con el texto ya escrito; el envío lo hace ella, en su sesión. Aquí no hay
+//   - **Lo manda la persona, no nosotros.** El botón abre la página de
+//     propuestas en otra pestaña con el dominio; el envío lo hace ella. Aquí no hay
 //     `fetch` (lo prohíbe `npm run check:no-network` fuera de catalog/update/).
 //   - **Viaja SOLO el dominio.** Ni la dirección, ni el asunto, ni el nombre de
 //     quien escribe. El asunto de ejemplo que se ve en la lista se queda en el

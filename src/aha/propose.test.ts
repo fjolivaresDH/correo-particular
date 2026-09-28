@@ -70,32 +70,26 @@ describe("candidatos a proponer", () => {
 
 describe("qué viaja al proponer", () => {
   // Esta es la prueba que sostiene la promesa del popup. Si algún día alguien
-  // mete el asunto o la dirección en el cuerpo "para dar contexto", aquí salta.
-  // URLSearchParams codifica el espacio como «+», así que para leerlo como lo
-  // leerá GitHub hay que deshacer las dos cosas.
-  const legible = (u: string): string => decodeURIComponent(u.split("+").join(" "));
+  // mete el asunto o la dirección en el enlace "para dar contexto", aquí salta.
   const url = proposeHref("Tienda.Example");
-  const texto = legible(url);
+  const params = new URL(url).searchParams;
 
-  it("va al repositorio del catálogo y a ningún otro sitio", () => {
+  it("va a la página de propuestas y a ningún otro sitio", () => {
     expect(url.startsWith(PROPOSE_URL + "?")).toBe(true);
+    expect(new URL(PROPOSE_URL).protocol).toBe("https:");
   });
 
-  it("lleva el dominio, en minúsculas", () => {
-    expect(texto).toContain("Dominio: tienda.example");
-    expect(texto).not.toContain("Tienda.Example");
+  it("lleva UN solo parámetro: el dominio, en minúsculas", () => {
+    expect([...params.keys()]).toEqual(["dominio"]);
+    expect(params.get("dominio")).toBe("tienda.example");
   });
 
   it("NO cabe ninguna dirección de correo", () => {
-    expect(texto).not.toMatch(/@/);
+    expect(decodeURIComponent(url)).not.toMatch(/@/);
   });
 
   it("NO lleva asunto ni contenido: el ejemplo se queda en el popup", () => {
     const asunto = "Tu pedido va en camino";
-    expect(legible(proposeHref("tienda.example"))).not.toContain(asunto);
-  });
-
-  it("y lo dice dentro, para quien lea la propuesta en GitHub", () => {
-    expect(texto).toContain("No incluye ninguna dirección ni contenido de correo");
+    expect(decodeURIComponent(proposeHref("tienda.example"))).not.toContain(asunto);
   });
 });

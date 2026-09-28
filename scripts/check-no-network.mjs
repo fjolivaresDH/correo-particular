@@ -47,12 +47,12 @@ const CATALOG_URL = "https://raw.githubusercontent.com/fjolivaresDH/correo-parti
  * La única URL a la que puede NAVEGAR la persona con un clic: proponer un
  * remitente al catálogo. No es lo mismo que pedir algo por la red y por eso va
  * aparte — nadie la llama en segundo plano; abre una pestaña con el texto ya
- * escrito y el envío lo hace ella, en su sesión de GitHub. Para que la
+ * del dominio y el envío lo hace ella desde esa página. Para que la
  * distinción sea real y no una promesa, esta URL tiene PROHIBIDO aparecer
  * dentro de `src/catalog/update/`, que es la única carpeta donde vive `fetch`:
  * así no queda ningún sitio del código donde las dos cosas puedan juntarse.
  */
-const PROPOSE_URL = "https://github.com/fjolivaresDH/correo-particular-catalogo/issues/new";
+const PROPOSE_URL = "https://correo-particular-propuestas.vercel.app/proponer";
 /** Lo único que `src/catalog/update/` puede importar. */
 const UPDATE_IMPORTS = new Set(["../validate", "../../rules/types"]);
 

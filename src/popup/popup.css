@@ -112,7 +112,7 @@ footer p + p { margin-top: 4px; }
 
 /* «Proponer un remitente»: va debajo de las categorías, apagado, porque es
    colaboración y no una tarea del día. El botón nunca manda nada solo: abre
-   GitHub con el texto escrito (ver src/aha/propose.ts). */
+   la página de propuestas con el dominio (ver src/aha/propose.ts). */
 .propose-title {
   margin: 16px 0 4px;
   font-size: 13px;
