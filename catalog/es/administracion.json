@@ -89,7 +89,9 @@
       "match": {
         "domains": [
           "sedecatastro.gob.es",
-          "catastro.meh.es"
+          "catastro.meh.es",
+          "catastro.hacienda.gob.es",
+          "catastro.gob.es"
         ]
       },
       "market": "es",

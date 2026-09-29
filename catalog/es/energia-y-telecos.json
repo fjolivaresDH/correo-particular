@@ -402,7 +402,7 @@
       "category": "bill",
       "match": {
         "domains": [
-          "hidraliagestion.es"
+          "hidralia.es"
         ],
         "subject": [
           "factura",

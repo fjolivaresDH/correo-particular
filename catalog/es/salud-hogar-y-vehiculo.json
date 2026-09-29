@@ -163,7 +163,8 @@
       "category": "appointment",
       "match": {
         "domains": [
-          "catsalut.gencat.cat"
+          "catsalut.gencat.cat",
+          "catsalut.cat"
         ],
         "subject": [
           "cita",
@@ -234,7 +235,7 @@
       "category": "bill",
       "match": {
         "domains": [
-          "movistarprosegualarmas.es"
+          "movistarproseguralarmas.es"
         ],
         "subject": [
           "factura",
